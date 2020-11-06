@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(35, 36, 41);
+}
+li, a, button, .slide-show-absolute-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 5%;
+    background-color: rgb(35, 36, 41);
+}
+.nav-logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+.nav-links{
+    list-style: none;
+}
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    color: red;
+    border-bottom: 2px solid red;
+    /* color: #0088a9; */
+}
+.cta button{
+    padding: 9px 25px;
+    background-color: rgb(255, 0, 0);
+    /* background-color: rgba(0,136, 169, 1); */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cta button:hover{
+    background-color: rgba(255, 0, 0, 0.863);
+    /* background-color: rgba(0,136, 169, 0.8); */
+}
+/* NAVIGATION BAR END */
+
+/* MAIN START */
+.main .img img{
+    width: 100%;
+}
+.main .img{
+    position: relative;
+}
+.main .content{
+    width: 100%;
+    position: absolute;
+    left: 3vw;
+    bottom: 5vh;
+}
+.main .content h1{
+    color: white;   
+}
+.main .content p{
+    width: 50%;
+    color: rgb(175, 175, 175);
+}
+.main .rules{
+    margin-left: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px rgb(235, 19, 19);
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+.cards{
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cards .card1{
+    background-color: gray;
+    width: 20%;
+    margin: 10px;
+    border-radius: 20px;
+}
+.cards .card1:hover{
+    cursor: pointer;
+    width: 25%;
+}
+.cards .card1 a img{
+    width: 100%;
+    margin: auto;
+    border-radius: 20px 20px 0px 0px;
+}
+.cards .card1 h2{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+.cards .card1 a i{
+    display: none;
+}
+.cards .card1 button{
+    background-color: red;
+}
+/* MAIN END */
+
+/* FOOTER START */
+footer{
+    background-color: rgb(34, 34, 34);
+}
+footer .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer .footer .footer-img img{
+    width: 150px;
+}
+footer .footer li, footer .footer li a{
+    list-style: none;
+}
+footer .footer li:hover, footer .footer li a:hover{
+    color: red;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+.copyright p{
+    text-align: center;
+}
+/* FOOTER END */
+
+@media only screen and (max-width: 700px) {
+    body {
+      background-color: rgb(0, 0, 0);
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-logo{
+        margin: 0px 0px 10px 0px;
+    }
+    .cta button{
+        margin-top: 20px;
+    }
+    .main .rules{
+        color: white;
+        text-shadow: 3px 3px 3px rgb(255, 0, 0);
+        text-align: center;
+    }
+    .cards{
+        width: 100%;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .cards .card1{
+        width: 35%;
+        margin: 10px auto;
+    }
+    footer .footer .footer-img img{
+        width: 100px;
+    }
+  }
+@media only screen and (max-width: 425px)
+{
+    .main .content .heading{
+        font-size: medium;
+    }
+    .main .content p{
+        width: 70%;
+        font-size: small;
+    }
+    footer .footer li, footer .footer li a{
+        font-size: small;
+        margin: 2px;
+    }
+    footer .footer .footer-img img{
+        margin-left: 5px;
+        width: 50px;
+    }
+}
