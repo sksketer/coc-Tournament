@@ -71,7 +71,8 @@ li, a, button, .slide-show-absolute-text{
     text-align: center;
     font-size: 5vw;
     color: whitesmoke;
-}
+    font-weight: 500;
+    color: white;}
 .timer .p p{
     text-align: center;
     font-size: 8vw;
