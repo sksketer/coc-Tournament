@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Clash of clan</title>
 </head>
@@ -14,13 +15,24 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#rules">Rules</a></li>
                 <li><a href="#services">Services</a></li>
             </ul>
         </nav>
         <a href="https://docs.google.com/forms/d/1xXtpzJdnbQwI3y154pbGAl6HYBU0kKw8-mEl0Lojc_I/edit#responses" target="_blanks" class="cta"><button>Join</button></a>
     </div>
     <!-- NAVIGATION BAR COMPLETED -->
+
+    <!-- timer start -->
+        <div class="timer">
+            <div class="label">
+                <label for="">Tournament start in:</label>
+            </div>
+            <div class="p">
+                <p class="animate__heartBeat " id="demo"></p>
+            </div>
+        </div>
+    <!-- timer end -->
     
     <!-- MAIN  START-->
     <div class="main">
@@ -33,7 +45,19 @@
                   </p>
             </div>
         </div>
+        
         <p class="rules" id="rules">Rules</p>
+        <div class="rule-list">
+            <div class="list">
+                <ul>
+                    <li>Match type: 5v5</li>
+                    <li>Preparation time: 15 minutes</li>
+                    <li>Match Time: 1 hour</li>
+                    <li>Mode: Best of 1, only one attack per player is allowed.</li>
+                    <li>Game Mode: Friendly War</li>
+                </ul>
+            </div>
+        </div>
         <div class="cards">
             <div class="card1">
                 <a href="https://docs.google.com/forms/d/1xXtpzJdnbQwI3y154pbGAl6HYBU0kKw8-mEl0Lojc_I/edit#responses"><img src="img/th9.jpg" alt=""></a>
@@ -83,9 +107,43 @@
             </div>
         </div>
         <div class="copyright">
-            <p>&copy;copyright by sketeramrit</p>
+            <div class="copyright-text">
+                <p>&copy;copyright by sketeramrit</p>
+            </div>
         </div>
     </footer>
     <!-- FOOTER END -->
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Nov 12, 2020 15:37:25").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+
 </body>
 </html>
