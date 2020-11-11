@@ -58,25 +58,23 @@ li, a, button, .slide-show-absolute-text{
 /* NAVIGATION BAR END */
 /* timer start */
 .timer{
-    /* background-color:  rgb(29, 29, 29); */
-    width: 60%;
+    width: 100%;
     margin: 0pc auto;
-    height: 150px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
 }
-.timer .label label{
-    font-size: x-large;
-    align-items: center;
+.timer .label{
+    margin: 0px auto;
+    display: flex;
+}
+.timer .label .tt{
     text-align: center;
-    font-weight: 500;
+    font-size: 5vw;
     color: whitesmoke;
 }
 .timer .p p{
     text-align: center;
-    font-size: 60px;
-    margin-top: 0px;
+    font-size: 8vw;
     color: rgb(255, 0, 0);
     text-shadow: 2px 3px 5px white;
 }
@@ -185,11 +183,7 @@ footer .footer li:hover, footer .footer li a:hover{
 }
 /* FOOTER END */
 
-@media only screen and (max-width: 950px) {
-    .timer{
-        width: 100%;
-    }
-}
+
 @media only screen and (max-width: 700px) {
     body {
       /* background-color: rgb(0, 0, 0); */
@@ -204,13 +198,9 @@ footer .footer li:hover, footer .footer li a:hover{
     .cta button{
         margin-top: 20px;
     }
-    .timer{
-        display: flex;
-        flex-direction: column;
-    }
-    .timer .label{
-        width: 45%;
-        margin: 0px auto;
+    .timer .label label{
+        font-size: xx-large;
+        text-align: center;
     }
     .main .rules{
         color: white;
@@ -231,18 +221,9 @@ footer .footer li:hover, footer .footer li a:hover{
         width: 100px;
     }
   }
-@media only screen and (max-width: 425px)
+@media only screen and (max-width: 450px)
 {
-    .timer{
-        height: 100px;
-    }
-    .timer .label label{
-        /* display: none; */
-        font-size: large;
-    }
-    .timer .p p{
-        font-size: x-large;
-    }
+    
     .main .content .heading{
         font-size: medium;
     }
